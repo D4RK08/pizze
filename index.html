@@ -2,39 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Refresh" content="0; url='https://www.w3docs.com'" />
     <title>Redirecting...</title>
-    <script type="text/javascript">
-        // Funzione per eseguire la richiesta AJAX
-        function readUrlFile() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'url.txt', true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var redirectUrl = xhr.responseText.trim();
-                    window.location.href = redirectUrl;
-                }
-            };
-            xhr.send();
-        }
-
-        // Esegui la funzione di lettura del file quando la pagina viene caricata
-        window.onload = readUrlFile;
-    </script>
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="#" id="redirect-link">link to the new page</a>.</p>
-    <script type="text/javascript">
-        // Aggiorna il link di fallback con il contenuto di url.txt
-        var link = document.getElementById('redirect-link');
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'url.txt', true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                var redirectUrl = xhr.responseText.trim();
-                link.href = redirectUrl;
-            }
-        };
-        xhr.send();
-    </script>
 </body>
 </html>
